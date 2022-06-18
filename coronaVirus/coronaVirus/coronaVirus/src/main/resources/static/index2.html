@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <title>查询全国疫情信息</title>
+    <link href="https://cdn.staticfile.org/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet"><!-- 样式 -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/button.css">
+</head>
+<body style="padding-top: 10px; padding-bottom: 10px;background-image: url('png/0.1.png');" >
+<div class="ui container">
+    <div class="ui form">
+        <div class="field">
+            <form id="form2">
+                <h id="tit">选择需要查询的疫情状况</h>
+                <select id="param2">
+                    <option value ="confirmedCount">累积确诊人数</option>
+                    <option value ="confirmedIncr">较昨日新增确诊人数</option>
+                    <option value ="curedCount">累积治愈人数</option>
+                    <option value ="curedIncr">较昨日新增治愈人数</option>
+                    <option value ="currentConfirmedCount">当前确诊人数</option>
+                    <option value ="currentConfirmedIncr">当前新增确诊人数</option>
+                    <option value ="deadCount">累积死亡人数</option>
+                    <option value ="deadIncr">较昨日新增死亡人数</option>
+                    <option value ="highDangerCount">高风险地区数量</option>
+                    <option value ="midDangerCount">中风险地区数量</option>
+                    <option value ="suspectedCount">疑似感染者人数</option>
+                    <option value ="suspectedCountIncr">新增疑似感染者人数</option>
+
+                    </select>
+            </form>
+        </div>
+        <button class="button" type="button" value="查询" id="btn" >查询</button>
+    </div>
+</div>
+<header id="app-header"></header>
+<div class="sec">
+    <h1><div style="text-align: center;">疫苗接种注意事项</div></h1>
+    <h2>注意事项</h2>
+    <p class="p1"><b>1. 避免空腹接种：</b>接种前应避免空腹接种，可以摄入适量的食物，避免因饥饿造成接种后出现恶心. 干呕等不适症状；</p>
+    <p class="p1"><b>2. 提供个人情况：</b>虽然接种新冠疫苗的风险很小，但受种者有义务向医护人员提供基本情况，主要包括年龄. 体温. 血压和既往病史等。主要是为了让医务人员更好地了解受种者的身体状况，从而判断是否适合接种；</p>
+    <p class="p1"><b>3. 注意接种间隔：</b>若患者已经注射过免疫球蛋白，则需要间隔1个月再接种新冠肺炎疫苗。而其他疫苗与新冠疫苗的接种间隔应＞14天，以免影响疫苗的免疫效果。若受种者在接种新冠疫苗后，需要接种狂犬病疫苗. 破伤风疫苗等应急疫苗，可以不考虑接种间隔；</p>
+    <p class="p1"><b>4. 保护接种部位皮肤：</b>接种时应选择皮肤完整性好的一侧，避免在伤口处接种。接种后当天也尽量不要让接种部位沾水，避免引发感染；</p>
+    <p class="p1"><b>5. 留观30分钟：</b>接种疫苗后，为避免出现急性反应，受种者需要在现场留观30分钟。一旦出现昏厥. 呼吸困难等严重不良反应，可以在现场由专业的医生及时实施救治；</p>
+    <p class="p1"><b>6. 注意不良反应：</b>接种后约7天内，需要注意是否出现皮疹. 低热等不适症状，如果出现严重的不良反应，需要及时就诊；</p>
+    <p class="p1"><b>7. 注意饮食和休息：</b>接种后建议不要吃辛辣刺激性食物，避免饮酒. 吸烟，以及剧烈运动，这些因素可能不利于接种部位恢复以及疫苗发挥更好的效果；</p>
+    <p class="p1"><b>8. 做好个人防护：</b>即使接种了新冠疫苗，也不代表完全不会被传染，所以日常生活中仍应佩戴好口罩，勤开窗通风. 勤洗手，避免去人多的公共场所，注意与他人保持一定的社交距离。</p>
+    <h2 class="p"2>禁忌事项</h2>
+    <p class="p2"><b>1. 疫苗过敏史：</b>若受种者在接种新冠疫苗前，曾经有过注射疫苗过敏病史，包括急性过敏反应. 血管神经性水肿. 呼吸困难等情况，不建议接种；</p>
+    <p class="p2"><b>2. 严重的神经系统病史：</b>若患者近3年内存在癫痫发作史，以及横贯性脊髓炎. 格林-巴利综合征. 脱髓鞘疾病等，不建议接种新冠疫苗；</p>
+    <p class="p2"><b>3. 妊娠期女性：</b>为避免对腹中的胎儿造成影响，妊娠期女性不建议接种新冠疫苗，可以待妊娠结束后再行接种；</p>
+    <p class="p2"><b>4. 处于疾病急性期：</b>处于疾病急性期，比如有发热. 咳嗽. 腹泻. 皮疹等症状的患者，或处于糖尿病. 高血压. 慢性肝炎等慢性病急性发作期的患者，不宜接种新冠疫苗，应待疾病控制后再行接种</p>
+</div>
+</body>
+<script>
+
+    $("#btn").click(function () {
+        window.location.href="china.html?fed=" +$("#param2").val();
+    });
+
+</script>
+</html>

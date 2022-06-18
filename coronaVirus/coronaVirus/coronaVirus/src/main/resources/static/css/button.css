@@ -1,0 +1,18 @@
+
+
+.button{
+    position: relative;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    line-height: 70px;
+    font-size: 25px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 30px;
+    background: linear-gradient(90deg,rgb(39, 122, 218),rgb(74, 230, 121),rgb(201, 214, 13),rgb(226, 20, 233),rgb(16, 172, 219));
+    background-size: 400%;
+    z-index: 1;
+   margin: 10px;
+}
+

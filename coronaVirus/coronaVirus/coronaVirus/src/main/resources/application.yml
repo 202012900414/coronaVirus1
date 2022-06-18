@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/xgk_608?serverTimezone=GMT
+    username: root
+    password: 378378
+  jpa:
+      open-in-view: false
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 50MB
+      max-request-size: 50MB
+server:
+  servlet:
+    session:
+      timeout: 7200
+  max-http-header-size: 16384
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+

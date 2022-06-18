@@ -1,0 +1,77 @@
+body{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-repeat:no-repeat;
+    background-size:120%120%;
+}
+#btn{
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    padding: 16px 50px;
+    text-align: center;
+    font-weight:bold;
+    font-size:x-large;
+    font-family:微软雅黑;
+
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+
+    border-radius:5px;
+    cursor:pointer;
+    margin-left:500px;
+    margin-right:auto;
+
+}
+#btn:hover {
+    background-color: #73AA;
+    color: white;
+}
+#tit{
+    text-align:center;
+    font-weight:bolder;
+    font-size:x-large;
+    font-weight:bolder;
+    color:grey;
+    font-family:"微软雅黑 Light";
+    margin-left: 445px;
+
+
+}
+.p1{
+    color:ghostwhite;
+    font-family:"微软雅黑 Light";
+    font-weight:bolder;
+    font-size: large;
+}
+.p2{
+    color:white;
+    font-family:"微软雅黑 Light";
+    font-weight:bolder;
+    font-size: large;
+}
+#param2{
+
+    cursor:pointer;
+    margin-left:330px;
+    margin-right:auto;
+    border-bottom-color:pink;
+    border-bottom-style:outset;
+    border-bottom-width:5px;
+
+    background-color:antiquewhite;
+    width:500px;
+    high:60px;
+    text-align: center;
+
+    color:skyblue;
+    font-family:"song体";
+    font-weight:bolder;
+    border-radius:50px;
+    font-size:x-large;
+}
+option{
+    color:skyblue;
+    background-color:gray;
+}
+

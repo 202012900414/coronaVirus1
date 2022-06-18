@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <title>查询省份疫情信息</title>
+    <link href="https://cdn.staticfile.org/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet"><!-- 样式 -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/button.css">
+</head>
+<body style="padding-top: 10px; padding-bottom: 10px;background-image: url('png/0.0.png');">
+<div class="ui container">
+    <div class="ui form">
+        <div class="field">
+            <form id="form1">
+                <p class="tit">
+                    <label>查询省份</label>
+                </p>
+                <select id="param1">
+                    <option value ="nu" selected = selected hidden ="hidden">请选择省份</option>
+                    <option value ="anhui">安徽</option>
+                    <option value ="aomen">澳门</option>
+                    <option value ="beijing">北京</option>
+                    <option value ="chongqing">重庆</option>
+                    <option value ="fujian">福建</option>
+                    <option value ="gansu">甘肃</option>
+                    <option value ="guangdong">广东</option>
+                    <option value ="guangxi">广西</option>
+                    <option value ="guizhou">贵州</option>
+                    <option value ="hainan">海南</option>
+                    <option value ="hebei">河北</option>
+                    <option value ="henan">河南</option>
+                    <option value ="heilongjiang">黑龙江</option>
+                    <option value ="hubei">湖北</option>
+                    <option value ="hunan">湖南</option>
+                    <option value ="jilin">吉林</option>
+                    <option value ="jiangsu">江苏</option>
+                    <option value ="jiangxi">江西</option>
+                    <option value ="liaoning">辽宁</option>
+                    <option value ="neimenggu">内蒙古</option>
+                    <option value ="ningxia">宁夏</option>
+                    <option value ="qinghai">青海</option>
+                    <option value ="shandong">山东</option>
+                    <option value ="sanjin">山西</option>
+                    <option value ="shanxi">陕西</option>
+                    <option value ="shanghai">上海</option>
+                    <option value ="sichuan">四川</option>
+                    <option value ="taiwan">台湾</option>
+                    <option value ="tianjin">天津</option>
+                    <option value ="xizang">西藏</option>
+                    <option value ="xianggang">香港</option>
+                    <option value ="xinjiang">新疆</option>
+                    <option value ="yunnan">云南</option>
+                    <option value ="zhejiang">浙江</option>
+
+                </select>
+            </form>
+        </div>
+        <div class="field" style="margin-top:50px">
+            <form id="form2">
+                <p class="tit">
+                    <label>查询的字段名</label>
+                </p>
+                <select id="param2">
+                    <option value ="nu" selected = selected hidden ="hidden">请选择查询疫情情况名</option>
+                    <option value ="confirmedCount">累积确诊人数</option>
+                    <option value ="confirmedIncr">较昨日新增确诊人数</option>
+                    <option value ="curedCount">累积治愈人数</option>
+                    <option value ="curedIncr">较昨日新增治愈人数</option>
+                    <option value ="currentConfirmedCount">当前确诊人数</option>
+                    <option value ="currentConfirmedIncr">当前新增确诊人数</option>
+                    <option value ="deadCount">累积死亡人数</option>
+                    <option value ="deadIncr">较昨日新增死亡人数</option>
+                    <option value ="highDangerCount">高风险地区数量</option>
+                    <option value ="midDangerCount">中风险地区数量</option>
+                    <option value ="suspectedCount">疑似感染者人数</option>
+                    <option value ="suspectedCountIncr">新增疑似感染者人数</option>
+
+                </select>
+            </form>
+        </div>
+        <button class="button" type="button" value="查询" id="btn" >查询</button>
+    </div>
+</div>
+<header id="app-header"></header>
+<div class="sec">
+    <h1><div style="text-align: center;">防疫知识及预防措施</div></h1>
+    <h3>基础防护篇</h3>
+
+    <p>1. 科学佩戴口罩：口罩盖住口鼻和下巴，鼻夹要压实；口罩出现脏污、变形、损坏、异味时需及时更换，每个口罩累计佩戴时间不超过8小时；在跨地区公共交通工具上，或医院等环境使用过的口罩不建议重复使用。</p>
+    <p>注意：不要上下或者内外反戴口罩，更不要戴口罩时露出口鼻。</p>
+    <p>2. 注意个人卫生：餐前餐后注意正确的洗手步骤。使用肥皂或洗手液并用流动水洗手，用一次性纸巾或干净毛巾擦手。双手接触呼吸道分泌物后（如打喷嚏后）应立即洗手。</p>
+    <p>3. 增强体质和免疫力。均衡饮食、适量运动、作息规律，避免产生过度疲劳。</p>
+    <p>4. 保持环境清洁和通风。每天开窗通风数次不少于3次，每次20-30分钟。户外空气质量较差时，通风换气频次和时间应适当减少。</p>
+    <p>5. 尽量减少到人群密集场所活动，避免接触呼吸道感染患者。</p>
+    <p>6. 如出现呼吸道感染症状如咳嗽、流涕、发热等，应居家隔离休息，持续发热不退或症状加重时及早就医。</p>
+    <p style="text-align: center;">
+
+    </p>
+
+    <h3>公共场所防护篇</h3>
+
+    <p>1. 遵守一米线规则：排队、付款、交谈、运动、参观等集体活动时，要保持1米及以上以上社交距离。遵守公共场所的秩序，不扎堆聚集。</p>
+    <p>2. 非必要不外出：在高风险地区，居家隔离，不给祖国和社会添麻烦，若必要外出，请配合防疫人员进行防疫检查，配合测体温，行程卡和健康码。</p>
+    <p>3. 注意咳嗽礼仪:咳嗽打喷嚏时，用纸巾捂住口鼻，无纸巾时用手肘代替，注意纸巾不要乱丢。</p>
+    <p>4. 公共区域的负责人：应该及时喷洒消毒液，及时开窗通风，做好口罩，洗手液，消毒液等抗疫物资的储备。制定应急措施预案，落实单位主体责任，加强相关人员的健康培训。</p>
+    <p style="text-align: center;">
+
+    </p>
+    <h3>出行防护篇</h3>
+
+    <P>1. 合理安排出行路程：不到中高风险地区及所在县（区市），非必要不前往中高风险地区所在地市，尽量避免前往省外陆地边境口岸城市。有条件的旅客尽可能错峰出行，避开春节等节假日前后高峰期。</P>
+    <p>2. 出行前：到政府相关疫情网站提前了解目的地病例报告及中高风险地区情况，随时了解疫情及防控信息，注意查询目的地相关防疫政策。备足出行期间所需的口罩、清洗剂、免洗手消毒液、纸巾等用品；注意气候变化，备齐保暖衣物，防止着凉。</p>
+    <p>3. 出行期间：乘坐飞机、火车等交通工具时要遵守安全秩序和相关防疫管理要求，全程做好个人防护。</p>
+</div>
+<header id="app-footer"></header>
+</body>
+<script>
+    console.log($("#param1").val())
+    $("#btn").click(function () {
+        window.location.href="provice.html?provice=" +$("#param1").val()+"&filed="+$("#param2").val();
+    });
+
+
+</script>
+</html>

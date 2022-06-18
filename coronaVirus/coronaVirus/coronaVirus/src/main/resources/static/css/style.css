@@ -1,0 +1,24 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #10AEB5;
+}
+li{
+	list-style:none;
+}
+i{
+	font-style:normal;
+}
+span{
+	cursor:pointer;
+}
+.container {
+	width: 2000px;
+	margin: 20px auto;
+	padding: 0.15625rem 0;
+	text-align: center;
+	background-color: #ffff;
+	border-radius: 15px;
+}

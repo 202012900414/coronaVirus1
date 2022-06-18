@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8" >
+    <title>疫情查询</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+	<script defer src="js/index.js"></script>
+	<link rel="stylesheet" href="css/button.css">
+</head>
+
+<body style="background-color:#10aeb5;background-image: url(png/body.png);background-repeat:no-repeat;background-size: 100%110%">
+
+
+<div style="margin:auto;  display:flex;justify-content:center; align-items:center; margin-bottom: 20px; ;">
+    <button class="button" style=" width:400px;
+    height: 200px;"  onclick="{ location.href='index2.html'}">
+		<h2>查询全国最近一天确诊疫情地图</h2></button>
+
+    <button class="button" style=" width:400px;
+    height: 200px;" onclick="{ location.href='index1.html'}">
+		<h2> 查询各省最近三十天疫情变化</h2></button>
+
+</div>
+
+<center>
+<div style="margin-left: auto;margin-right: auto; height: 350px;padding-top: 10px;background-color: #ffffff; width: 768px; border-radius: 20px;
+ box-shadow: lightskyblue; background-color: powderblue  ">
+<div>
+	<div class="header"><h1>国内疫情</h1></div>
+	<div class="header" id="time"><h1 style="font-size: small;border-radius: 40px;">数据更新时间：每天18:00</h1></div>
+</div>
+
+<div class="big" style="float: left;overflow: hidden;width: 734px; height: 50px;display: flex;justify-content: space-around;">
+	<div class="" style="border-radius: 12px;background: skyblue">
+		<div><td  >累积确诊  </td></div>
+		<div style="background-color: aqua;" id="confirmedCount" >
+			<td style="border-radius: 40px;">-</td>
+		</div>
+
+	</div>
+	<div class="" style="border-radius: 12px;background: skyblue">
+		<div><td style="" >累积治愈   </td></div>
+		 <div style="background-color: aqua;" id="curedCount" >
+         <td style="border-radius: 40px;">-</td>
+        </div>
+	</div>
+	<div class="" style="border-radius: 12px;background: skyblue">
+		<div><td style="" >累积死亡  </td></div>
+		<div style="background-color: aqua;"id="deadCount">
+			<td style="border-radius: 40px;">-</td>
+		</div>
+	</div>
+	<div class="" style="border-radius: 12px;background: skyblue">
+		<div><td style="" >境外输入</td>  </div>
+	<div style="background-color: aqua;"id="outsideInputCount"></div>
+		<td style="border-radius: 40px;">-</td>
+	</div>
+	<div class="" style="border-radius: 12px;background: skyblue">
+	<div style="position: relative;"><td style="">无症状感染 </td></div>
+	<div style="background-color: aqua;" id="asymptomaticInfectionCount"></div>
+		<td style="border-radius: 40px;">-</td>
+   </div>
+
+</div>
+	<div style="width: 500px; height:30px;">
+		<select id="cityp" style="color:skyblue;
+    font-family: 微软雅黑;
+		font-weight:bolder;
+		border-radius:50px;
+		font-size:x-large;
+		cursor:pointer;
+    margin-left:5px;
+    margin-right:auto;
+    border-bottom-color:pink;
+    border-bottom-style:outset;
+    border-bottom-width:5px;
+    background-color:antiquewhite;
+        width:500px;
+        high:60px;
+        text-align: center;
+">
+			<option value ="" selected = selected hidden ="hidden"><h3>查看各省份城市疫情分布</h3></option>
+			<option value ="anhui">安徽</option>
+			<option value ="beijing">北京</option>
+			<option value ="chongqing">重庆</option>
+			<option value ="fujian">福建</option>
+			<option value ="gansu">甘肃</option>
+			<option value ="guangdong">广东</option>
+			<option value ="guangxi">广西</option>
+			<option value ="guizhou">贵州</option>
+			<option value ="hainan">海南</option>
+			<option value ="hebei">河北</option>
+			<option value ="henan">河南</option>
+			<option value ="heilongjiang">黑龙江</option>
+			<option value ="hubei">湖北</option>
+			<option value ="hunan">湖南</option>
+			<option value ="jilin">吉林</option>
+			<option value ="jiangsu">江苏</option>
+			<option value ="jiangxi">江西</option>
+			<option value ="liaoning">辽宁</option>
+			<option value ="neimenggu">内蒙古</option>
+			<option value ="ningxia">宁夏</option>
+			<option value ="qinghai">青海</option>
+			<option value ="shandong">山东</option>
+			<option value ="sanjin">山西</option>
+			<option value ="shanxi">陕西</option>
+			<option value ="shanghai">上海</option>
+			<option value ="sichuan">四川</option>
+			<option value ="tianjin">天津</option>
+			<option value ="xinjiang">新疆</option>
+			<option value ="yunnan">云南</option>
+			<option value ="zhejiang">浙江</option>
+
+		</select>
+		<button id="cityb" style="border:2px solid;width: 100px; height:30px;background-color: burlywood; font-size: large;border-radius: 40px;"type="button"  >查询</button>
+	</div>
+<div class="big" style="float: left ;overflow: auto;width: 734px;height: 200px;display: flex;justify-content: space-around; margin-top: 125px;">
+	<div class="" style="border-radius: 12px;background: skyblue;height: 40px;">
+		<div><td style="" >新增确诊  </td></div>
+		<div style="background-color: aqua;"id="confirmedCountIncr"></div>
+		<td style="border-radius: 40px;">-</td>
+	</div>
+	<div class="" style="border-radius: 12px;background: skyblue;height: 40px;">
+		<div><td style="" >新增治愈   </td></div>
+		 <div style="background-color: aqua;" id="curedIncr"></div>
+		<td style="border-radius: 40px;">-</td>
+	</div>
+	<div class="" style="border-radius: 12px;background: skyblue;height: 40px;">
+		<div><td style="">新增死亡   </td></div>
+		<div style="background-color: aqua;"id="deadIncr"></div>
+		<td style="border-radius: 40px;">-</td>
+	</div>
+	<div class="" style="border-radius: 12px;background: skyblue;height: 40px;">
+		<div><td style="">新增境外 </td>  </div>
+	<div style="background-color: aqua;" id="outsideInputIncr"></div>
+		<td style="border-radius: 40px;">-</td>
+	</div>
+	<div class="" style="border-radius: 12px;background: skyblue;height: 40px;">
+		<div style="position: relative;"><td style="">新增无症状 </td></div>
+		<div style="background-color: aqua;" id="ai"></div>
+		<td style="border-radius: 40px;">-</td>
+	</div>
+
+</div>
+
+
+</div></center>
+</body>
+
+<script>
+	$.ajax({
+		// 请求地址
+		url:"/in",
+		// 数据传输方式
+		type:"get",
+		async:true,
+		// 从后台传到前台的数据类型
+		dataType:"json",
+		// 请求成功,function形参data用来接收从后台传过来的数据
+		success:function(data){
+			console.log(data)
+
+		},
+		//请求失败
+		error:function(){
+			console.log("in失败！")
+		}
+	});
+
+
+	$("#cityb").click(function () {
+		p=$("#cityp").val();
+		p=encodeURI(encodeURI(p))
+		window.location.href="cities.html?cityname=" +p;
+		console.log(p);
+	});
+
+</script>
+
+</html>
