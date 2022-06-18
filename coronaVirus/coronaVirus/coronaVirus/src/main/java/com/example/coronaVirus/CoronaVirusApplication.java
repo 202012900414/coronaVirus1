@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
-
+//1
 @EnableScheduling
 @SpringBootApplication
 @MapperScan("com.example.coronaVirus.Mapper")
